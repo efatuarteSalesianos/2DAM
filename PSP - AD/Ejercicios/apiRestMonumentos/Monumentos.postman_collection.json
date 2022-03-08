@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "ec6aeb75-e48c-4d70-88d9-2247658bae1c",
+		"name": "Monumentos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Monumentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_pais\": \"ES\",\r\n        \"nombre_pais\": \"España\",\r\n        \"nombre_ciudad\": \"Sevilla\",\r\n        \"localizacion\": [\r\n            36,\r\n            6\r\n        ],\r\n        \"nombre\": \"Catedral de Sevilla\",\r\n        \"descripcion\": \"Esto antes era la Torre del Oro\",\r\n        \"foto\": \"https://i0.wp.com/www.turismoreligioso.travel/wp-content/uploads/2020/08/Catedral-de-Sevilla-turismo-religioso.jpg?fit=1038%2C584&ssl=1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/monumentos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						""
+					]
+				},
+				"description": "Listar todos"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Monumento por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/monumentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir Monumento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_pais\": \"US\",\r\n    \"nombre_pais\": \"Estados Unidos\",\r\n    \"nombre_ciudad\": \"Nueva York\",\r\n    \"localizacion\": [\r\n        40,\r\n        40\r\n    ],\r\n    \"nombre\": \"Estatua de la Libertad\",\r\n    \"descripcion\": \"La Estatua de la Libertad se inauguró en octubre de 1886 y fue un regalo de los franceses para conmemorar los 100 años de la Declaración de Independencia\",\r\n    \"foto\": \"https://www.conmishijos.com/assets/posts/14000/14591-aprende-ingles-con-estos-datos-asombrosos-de-la-es.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/monumentos/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Monumento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo_pais\": \"ES\",\r\n    \"nombre_pais\": \"España\",\r\n    \"nombre_ciudad\": \"Sevilla\",\r\n    \"localizacion\": [\r\n        36,\r\n        6\r\n    ],\r\n    \"nombre\": \"Catedral de Sevilla\",\r\n    \"descripcion\": \"La Santa Iglesia Catedral Metropolitana de Sevilla, es de estilo gótico. Se trata de la catedral más grande del mundo en ese estilo. La Unesco la declaró en 1987, junto al Real Alcázar y el Archivo de Indias, Patrimonio de la Humanidad​ y, el 25 de julio de 2010, Bien de Valor Universal Excepcional\",\r\n    \"foto\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CatedraldeSevilla2.jpg/1280px-CatedraldeSevilla2.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/monumentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Monumento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/monumentos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"monumentos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

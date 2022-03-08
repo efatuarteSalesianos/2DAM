@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+  }
+
+  .mat-elevation-z8{
+      margin-top: 70px;
+
+  }
+  .caja{
+      margin: auto;
+      width: 90%;
+  }
+  th{
+      color: #3F51B5;
+      width: 10%;
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+
+  }
+  mat-icon{
+    color: #3F51B5;
+}
+.mat-elevation-z8{
+    width: 90%;
+    margin: auto;
+}
+
+.contenedor{
+    margin: 20px;
+
+}
+.centro{
+    margin-top: 50px;
+}
+.image{
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.home {
+    font-size: 20px;
+}
+
+button {
+    margin-left: 2%;
+}

@@ -1,0 +1,45 @@
+<mat-dialog-content class="mat-typography">
+  <div class="container">
+      <div class="col-2">
+          <img class="image" [src]="propietarioDto.avatar" name="avatar"/>
+      </div>
+      <div class="col-2">
+          <mat-form-field appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre" [(ngModel)]="propietarioDto.nombre" name="nombre" required>
+          </mat-form-field>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input matInput placeholder="Apellidos" [(ngModel)]="propietarioDto.apellidos" name="nombre" required>
+        </mat-form-field>
+     </div>
+     <div class="col-2">
+      <mat-form-field appearance="outline">
+          <mat-label>Dirección</mat-label>
+          <input matInput placeholder="Dirección" [(ngModel)]="propietarioDto.direccion" name="nombre" required>
+      </mat-form-field>
+   </div>
+      <div class="col-2">
+          <mat-form-field appearance="outline">
+              <mat-label>Teléfono</mat-label>
+              <input matInput placeholder="Teléfono" [(ngModel)]="propietarioDto.telefono" name="telefono" required>
+          </mat-form-field>
+      </div>
+      <div class="col-2">
+          <mat-form-field appearance="outline">
+              <mat-label>Correo Electrónico</mat-label>
+              <input matInput placeholder="Correo Electrónico" [(ngModel)]="propietarioDto.email" name="email" required>
+          </mat-form-field>
+      </div>
+  </div>
+</mat-dialog-content>
+<mat-action-list class="row">
+  <div class="col-2">
+    <button class="button" mat-raised-button color="primary" routerLink="/nueva/vivienda" (click)="crear()">Registrar</button>
+  </div>
+  <div class="col-2 offset-3">
+    <button class="button" mat-dialog-close mat-raised-button color="primary" class="bg-danger" routerLink="/nueva/vivienda">Cancelar</button>
+  </div>
+</mat-action-list>

@@ -1,0 +1,7 @@
+<div class="row">
+    <div class="col-md-2" *ngFor="let inmobiliaria of inmobiliariasTopList">
+        <a [routerLink]="['/inmobiliaria', inmobiliaria.id]">
+            <app-inmobiliaria-item [inmobiliariaInput]="inmobiliaria"></app-inmobiliaria-item>
+        </a>
+    </div>
+</div>

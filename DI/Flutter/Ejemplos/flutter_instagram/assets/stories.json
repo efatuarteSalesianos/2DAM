@@ -1,0 +1,71 @@
+{
+    "stories": [{
+            "name": "emeelegg",
+            "profilePic": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        {
+            "name": "AlvaroFRivas",
+            "profilePic": "https://randomuser.me/api/portraits/men/3.jpg"
+        },
+        {
+            "name": "RolicD",
+            "profilePic": "https://randomuser.me/api/portraits/men/4.jpg"
+        },
+        {
+            "name": "Crimaroca",
+            "profilePic": "https://randomuser.me/api/portraits/women/6.jpg"
+        },
+        {
+            "name": "LuisJV93",
+            "profilePic": "https://randomuser.me/api/portraits/men/8.jpg"
+        },
+        {
+            "name": "rehagal11",
+            "profilePic": "https://randomuser.me/api/portraits/men/10.jpg"
+        },
+        {
+            "name": "alo.oficial",
+            "profilePic": "https://randomuser.me/api/portraits/men/12.jpg"
+        },
+        {
+            "name": "carlos.sainz55",
+            "profilePic": "https://randomuser.me/api/portraits/men/13.jpg"
+        },
+        {
+            "name": "mariyisus97",
+            "profilePic": "https://randomuser.me/api/portraits/women/14.jpg"
+        },
+        {
+            "name": "efatuarte",
+            "profilePic": "https://randomuser.me/api/portraits/men/15.jpg"
+        },
+        {
+            "name": "taniadls",
+            "profilePic": "https://randomuser.me/api/portraits/men/16.jpg"
+        },
+        {
+            "name": "navalcode",
+            "profilePic": "https://randomuser.me/api/portraits/men/17.jpg"
+        },
+        {
+            "name": "elbocadillero",
+            "profilePic": "https://randomuser.me/api/portraits/men/19.jpg"
+        },
+        {
+            "name": "thiago_barr1",
+            "profilePic": "https://randomuser.me/api/portraits/men/20.jpg"
+        },
+        {
+            "name": "BWTAlpineF1Team",
+            "profilePic": "https://randomuser.me/api/portraits/men/22.jpg"
+        },
+        {
+            "name": "JoseMLaraR_",
+            "profilePic": "https://randomuser.me/api/portraits/men/23.jpg"
+        },
+        {
+            "name": "CristinaEB95",
+            "profilePic": "https://randomuser.me/api/portraits/women/25.jpg"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <div class="col-2 offset-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Avatar</mat-label>
+                <input matInput placeholder="Avatar" [(ngModel)]="inmobiliariaDto.avatar" name="avatar">
+            </mat-form-field>
+        </div>
+        <div class="col-2 offset-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" [(ngModel)]="inmobiliariaDto.nombre" name="nombre" required>
+            </mat-form-field>
+        </div>
+        <div class="col-2 offset-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Teléfono</mat-label>
+                <input matInput placeholder="Teléfono" [(ngModel)]="inmobiliariaDto.telefono" name="telefono">
+            </mat-form-field>
+        </div>
+        <div class="col-2 offset-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Correo Electrónico</mat-label>
+                <input matInput placeholder="Correo Electrónico" [(ngModel)]="inmobiliariaDto.email" name="email">
+            </mat-form-field>
+        </div>
+        <div class="col-2 offset-6">
+            <button class="button" mat-raised-button color="primary" routerLink="/inmobiliarias" (click)="crear()">Registrar</button>
+        </div>
+    </div>
+</mat-dialog-content>

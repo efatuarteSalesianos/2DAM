@@ -1,0 +1,82 @@
+<app-toolbar></app-toolbar>
+<div class="contenedor">
+    <div class="buscador">
+        <form class="search-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Población</mat-label>
+                <input matInput placeholder="Poblacion" [(ngModel)]="poblacion" name="poblacion" >
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="buscador">
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo</mat-label>
+            <mat-select [(ngModel)]="tipo" name="tipo">
+                <mat-option *ngFor="let n of tipoV" [value]="n.value">{{n.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="buscador">
+        <mat-form-field appearance="fill">
+            <mat-label>Estado</mat-label>
+            <mat-select [(ngModel)]="estado" name="estado">
+                <mat-option *ngFor="let n of estadoV" [value]="n.value">{{n.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="buscador">
+        <mat-form-field class="example-margin" appearance="fill">
+            <mat-label>Precio máximo</mat-label>
+            <input matInput type="number" [(ngModel)]="precio" name="precio">
+        </mat-form-field>
+    </div>
+    <div class="buscador">
+        <mat-form-field appearance="fill">
+            <mat-label>Habitaciones</mat-label>
+            <mat-select [(ngModel)]="numHabitaciones" name="numHabitaciones">
+                <mat-option *ngFor="let n of numSelected" [value]="n.value">{{n.viewValue}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="buscador">
+        <mat-form-field appearance="fill">
+            <mat-label>Baños</mat-label>
+            <mat-select [(ngModel)]="numBanyos" name="numBanyos">
+                <mat-option *ngFor="let n of numSelected" [value]="n.value">{{n.viewValue}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="buscador">                  
+        <button mat-button [matMenuTriggerFor]="menu">Más categorías</button>
+        <mat-menu #menu="matMenu">
+            <section class="example-section">
+                <mat-checkbox class="example-margin" [(ngModel)]="tienePiscina" [value]="tienePiscina" name="tienePiscina">Piscina</mat-checkbox>
+                <mat-checkbox class="example-margin" [(ngModel)]="tieneAscensor" [value]="tieneAscensor" name="tineAscensor">Ascensor</mat-checkbox>
+                <mat-checkbox class="example-margin" [(ngModel)]="tieneGaraje" [value]="tieneGaraje" name="tieneGaraje">Garaje</mat-checkbox>
+            </section>
+        </mat-menu>
+        
+    </div>
+</div>
+
+<div class="orden">
+    <div>
+        <img src="../../../../assets/img/mapa.png" alt="">
+    </div>
+</div>
+<div class="botones">
+    <button class="boton" mat-raised-button color="primary" (click)="filtrar()">
+        <mat-icon>search</mat-icon>Buscar
+    </button>
+    <button mat-raised-button color="primary" (click)="botonRegreso()" matTooltip="Resetear información">
+        Eliminar filtros
+    </button>
+</div>
+<app-vivienda-item-list *ngFor="let tarjeta of listaViviendas" [viviendaInput]="tarjeta"> </app-vivienda-item-list>
+
+
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="handlePage($event)"
+    aria-label="Select page">
+</mat-paginator>

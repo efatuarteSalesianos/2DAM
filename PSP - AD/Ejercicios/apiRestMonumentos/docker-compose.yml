@@ -1,0 +1,9 @@
+// docker-compose.yml
+version: "1.0"
+services:
+  app:
+    build: .
+    environment:
+      - H2_URL=jdbc:h2:./db/bd
+      - H2_USERNAME=Ernesto
+      - H2_PASSWORD=mi_pass

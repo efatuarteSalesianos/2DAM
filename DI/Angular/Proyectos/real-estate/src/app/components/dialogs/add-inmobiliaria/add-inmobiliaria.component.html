@@ -1,0 +1,6 @@
+<mat-select>
+  <mat-option *ngFor="let inmo of inmobiliariaList" value="{{inmo.id}}">{{inmo.nombre}}</mat-option>
+</mat-select>
+<mat-action-list>
+  <button mat-button (click)="addInmobiliaria()" class="bg-primary">Aceptar</button>
+</mat-action-list>

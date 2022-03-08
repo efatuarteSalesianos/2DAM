@@ -1,0 +1,51 @@
+.viviendas{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.example-card {
+    display: flex;
+    max-width: 850px;
+  }
+  .carta-imagen{
+    max-width: 400px;
+    margin-right: 20px;
+  }
+  .inmo{
+      display: flex;
+      justify-content: space-between;
+  }
+  .reparto{
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .botones{
+      display: flex;
+      justify-content: space-evenly;
+  }
+  .tipo{
+      align-items: center;
+  }
+  .iconos{
+    display: flex;
+    color: rgb(80, 79, 79);
+  }
+  .iconos >p{
+    margin-top: 3px;
+  }
+  .iconos > mat-icon{
+    margin-left: 10px;
+  }
+
+  .descripcion{
+    width: 250px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.alineamiento{
+  display: flex;
+}

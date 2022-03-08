@@ -1,0 +1,20 @@
+.row-first {
+    margin-top: 5%;
+}
+
+.image {
+    width: 260px;
+    height: 280px;
+    border-radius: 100%;
+}
+
+.row-estado {
+    text-align: center;
+    margin-top: 4%;
+}
+
+.icon {
+    margin-left: -7%;
+    margin-right: 10%;
+    margin-top: -5%;
+}

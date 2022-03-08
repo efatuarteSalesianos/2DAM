@@ -1,0 +1,56 @@
+<app-toolbar></app-toolbar>
+
+<div class="container">
+  <div class="row row-first">
+    <div class="col-md-3 offset-5">
+      <img class="image" [src]='(propietario.avatar)' [alt]='(propietario?.nombre)'/>
+  </div>
+  </div>
+    <div class="row row-first">
+        <div class="col-sm-6 col-md-3 offset-md-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input [readonly]="true" matInput [value]='(propietario.nombre)'>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <mat-form-field appearance="outline">
+              <mat-label>Apellidos</mat-label>
+              <input [readonly]="true" matInput [value]='(propietario.apellidos)'>
+          </mat-form-field>
+      </div>
+        <div class="col-sm-6 col-md-3 ">
+            <mat-form-field appearance="outline">
+                <mat-label>Correo Electrónico</mat-label>
+                <input [readonly]="true" matInput [value]='(propietario.email)'>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-3 offset-md-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Dirección</mat-label>
+                <input [readonly]="true" matInput [value]='(propietario.direccion)'>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <mat-form-field appearance="outline">
+              <mat-label>Teléfono</mat-label>
+              <input [readonly]="true" matInput [value]='(propietario.telefono)'>
+          </mat-form-field>
+      </div>
+    </div>
+
+</div>
+
+<div class="row row-estado">
+    <div class="container" style="margin-top: 2%">
+        <div class="row">
+            <div class="col-4" *ngFor="let vivienda of propietario?.listaViviendas">
+                <a routerLink="/vivienda/{{vivienda.id}}">
+                    <app-vivienda-item [viviendaInput]="vivienda"></app-vivienda-item>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

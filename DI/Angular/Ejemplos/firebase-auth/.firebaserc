@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gasapp-e2e7a": {
+      "hosting": {
+        "firebase-auth": [
+          "gasapp-e2e7a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gasapp-e2e7a"
+  }
+}

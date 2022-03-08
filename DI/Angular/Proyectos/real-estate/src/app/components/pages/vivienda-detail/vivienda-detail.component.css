@@ -1,0 +1,87 @@
+mat-icon {
+    font-size: 25pt;
+}
+
+.iconos {
+    padding: 15px 10px;
+}
+
+.fav {
+    font-size: 21px;
+    margin-right: 3%;
+    margin-top: -3%;
+    margin-left: -1%;
+}
+
+.precio {
+    font-size: 18pt;
+    color: grey;
+}
+
+.datos {
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.icon-edit {
+    font-size: 22px;
+}
+
+.icon-bin {
+    color: red;
+    font-size: 22px;
+}
+
+.material-icons-outlined {
+    font-size: 14pt;
+    height: 0%;
+}
+
+.info {
+    display: block;
+    text-align: center;
+}
+
+.contactar {
+    width: 46%;
+    display: block;
+    margin: 10px auto;
+}
+
+.menu {
+    margin-left: 200px;
+}
+
+.favoritos {
+    margin-top: -2%;
+}
+
+a:link {
+    text-decoration: none;
+    color: primary;
+}
+
+.material-icons-outlined-1 {
+    font-size: 20px;
+    padding: 13px 8px;
+    color: black;
+    margin-right: 10%;
+    margin-left: -7%;
+}
+
+.material-icons-outlined-2 {
+    font-size: 20px;
+    padding: 13px 8px;
+    color: white;
+    margin-right: 10%;
+    margin-left: -7%;
+}
+
+.phone {
+    color: black;
+}
+
+.contact {
+    color: white;
+}

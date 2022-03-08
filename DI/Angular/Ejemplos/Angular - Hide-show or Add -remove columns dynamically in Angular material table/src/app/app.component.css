@@ -1,0 +1,13 @@
+.selected {
+    background-color: aqua;
+}
+
+.edited {
+    background-color: darkblue;
+}
+.thead {
+    display: inline;
+}
+.top-margin {
+    margin-top: 5px;
+}

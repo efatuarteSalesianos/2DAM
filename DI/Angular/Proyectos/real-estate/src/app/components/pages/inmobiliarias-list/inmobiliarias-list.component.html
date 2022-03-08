@@ -1,0 +1,64 @@
+<app-toolbar></app-toolbar>
+<div class="contenedor">
+  <button style="margin-top: 30px; margin-bottom: 50px; display: flex; margin-left: auto;" mat-raised-button
+ color="primary" (click)="openDialogAgregarInmobiliaria()">Agregar
+    Inmobiliaria</button>
+    <div class="centro">
+  <div class="caja" class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="data" >
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef> AVATAR </th>
+          <td mat-cell *matCellDef="let element"> <img class="image" [src]="element.avatar" > </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> EMAIL </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+        <ng-container matColumnDef="telefono">
+            <th mat-header-cell *matHeaderCellDef> TELÉFONO </th>
+            <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+          </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="more">
+            <th mat-header-cell *matHeaderCellDef> MÁS </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-button [matMenuTriggerFor]="menu" #menuTrigger><mat-icon >more_vert</mat-icon></button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="openDialogEliminarInmobiliaria(element.id)" onclick="location.reload">
+                  <mat-icon style="color: red;">delete</mat-icon>
+                  <span style="color: red;">Eliminar</span>
+                </button>
+              </mat-menu>
+             </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+</div>
+</div>
+</div>

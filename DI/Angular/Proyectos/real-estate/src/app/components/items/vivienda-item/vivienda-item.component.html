@@ -1,0 +1,23 @@
+<mat-card class="example-card">
+    <mat-card-header routerLink="/vivienda/{{viviendaInput.id}}">
+
+        <mat-card-title class="plain-text">{{viviendaInput.tipo}} - {{viviendaInput.poblacion}}</mat-card-title>
+        <mat-card-subtitle class="plain-text">{{viviendaInput.intereses}} Me gusta</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content routerLink="/vivienda/{{viviendaInput.id}}">
+      <img class="image" [src]='viviendaInput.avatarVivienda' [alt]='viviendaInput.titulo' width="300px" height="300px">
+        <div class="container">
+            <div class="row texto">
+                <p class="plain-text precio">{{viviendaInput.precio|currency}}</p>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button mat-flat-button color="primary"><mat-icon class="icon">mail_outline</mat-icon>  Contactar</button>
+                </div>
+                <div class="col-md-1 offset-md-6">
+                    <button mat-button color="primary"><mat-icon class="icon">favorite_border</mat-icon>  Mis Favoritos</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

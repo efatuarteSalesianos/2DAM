@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "a270fbf9-1ff6-4c89-a7d9-62b79feb91d5",
+		"name": "Ej27",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"efatuarte\",\r\n    \"email\": \"ernesto.fatuarte@gmail.com\",\r\n    \"verifyEmail\": \"ernesto.fatuarte@gmail.com\",\r\n    \"password\": \"MiPassword2.\",\r\n    \"verifyPassword\": \"MiPassword2.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "01.1 - Error al crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"efatuarte\",\r\n    \"email\": \"ernesto.fatuarte@gmail.com\",\r\n    \"verifyEmail\": \"ernesto.fatuarte@gmail.com\",\r\n    \"password\": \"pass\",\r\n    \"verifyPassword\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

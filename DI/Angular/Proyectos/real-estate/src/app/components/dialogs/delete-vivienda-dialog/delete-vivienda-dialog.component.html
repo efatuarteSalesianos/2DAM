@@ -1,0 +1,11 @@
+<mat-dialog-content>
+<h1>¿Seguro que quieres eliminar esta vivienda?</h1>
+<p>Si desea continuar escribe "Si quiero eliminar la vivienda"</p>
+<mat-form-field appearance="outline">
+  <mat-label>Texto de confirmación</mat-label>
+  <input (keydown)="verificar()" matInput placeholder="Texto de confirmación" name="texto" [(ngModel)]="texto">
+</mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+<button *ngIf="b" mat-dialog-close mat-raised-button class="bg-danger text-white" (click)="delete()">Entiendo las consecuencias, eliminar vivienda</button>
+</mat-dialog-actions>

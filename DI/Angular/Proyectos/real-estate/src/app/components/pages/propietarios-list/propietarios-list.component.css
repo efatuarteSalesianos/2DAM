@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+  }
+.contenedor{
+    margin: 20px;
+}
+  th{
+    color: #3F51B5;
+    width: 10%;
+}
+mat-icon{
+    color: #3F51B5;
+}
+.eliminar{
+    color: rgb(201, 13, 13);
+}
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+.mat-elevation-z8{
+    width: 90%;
+    margin: auto;
+}
+.centro{
+    margin-top: 50px;
+}

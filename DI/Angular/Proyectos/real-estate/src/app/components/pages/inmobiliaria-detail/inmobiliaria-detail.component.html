@@ -1,0 +1,87 @@
+<app-toolbar></app-toolbar>
+
+<div class="container">
+  <div class="row row-first">
+  <div class="col-md-3 offset-md-4">
+    <img class="image" [src]='(inmobiliaria?.avatar)' [alt]='(inmobiliaria?.nombre)' />
+  </div>
+</div>
+    <div class="row row-first">
+
+        <div class="col-sm-6 col-md-3 offset-md-2">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input [readonly]="true" matInput [value]='(inmobiliaria.nombre)'>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6 col-md-3 ">
+            <mat-form-field appearance="outline">
+                <mat-label>Correo Electrónico</mat-label>
+                <input [readonly]="true" matInput [value]='(inmobiliaria.email)'>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Teléfono</mat-label>
+                <input [readonly]="true" matInput [value]='(inmobiliaria.telefono)'>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div class="row row-estado">
+        <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="Compra">
+                <div class="row row-estado">
+                    <div class="container" style="margin-top: 2%">
+                        <div class="row">
+                            <div class="col-4" *ngFor="let vivienda of inmobiliaria?.listaViviendas">
+                                <a routerLink="/vivienda/{{vivienda.id}}">
+                                    <app-vivienda-item [viviendaInput]="vivienda"></app-vivienda-item>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Alquiler">
+                <div class="row row-estado">
+                    <div class="container" style="margin-top: 2%">
+                        <div class="row">
+                            <div class="col-4" *ngFor="let vivienda of inmobiliaria?.listaViviendas">
+                                <a routerLink="/vivienda/{{vivienda.id}}">
+                                    <app-vivienda-item [viviendaInput]="vivienda"></app-vivienda-item>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Compartir">
+                <div class="row row-estado">
+                    <div class="container" style="margin-top: 2%">
+                        <div class="row">
+                            <div class="col-4" *ngFor="let vivienda of inmobiliaria?.listaViviendas">
+                                <a routerLink="/vivienda/{{vivienda.id}}">
+                                    <app-vivienda-item [viviendaInput]="vivienda"></app-vivienda-item>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Nueva Obra">
+                <div class="row row-estado">
+                    <div class="container" style="margin-top: 2%">
+                        <div class="row">
+                            <div class="col-4" *ngFor="let vivienda of inmobiliaria?.listaViviendas">
+                                <a routerLink="/vivienda/{{vivienda.id}}">
+                                    <app-vivienda-item [viviendaInput]="vivienda"></app-vivienda-item>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

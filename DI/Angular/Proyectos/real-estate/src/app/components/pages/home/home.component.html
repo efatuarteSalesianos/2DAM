@@ -1,0 +1,73 @@
+<app-toolbar></app-toolbar>
+<div>
+
+    <div class="banner">
+        <div class="contenedor">
+            <div>
+                <mat-tab-group mat-align-tabs="center" (selectedTabChange)="selectTab($event)">
+                    <mat-tab label="Compra"></mat-tab>
+                    <mat-tab label="Alquiler"></mat-tab>
+                    <mat-tab label="Obra nueva"></mat-tab>
+                    <mat-tab label="Compartir"></mat-tab>
+                </mat-tab-group>
+            </div>
+            <div class="buscador">
+                <div>
+                    <mat-form-field class="selector" appearance="fill">
+                        <mat-label>Tipo</mat-label>
+                        <mat-select [(ngModel)]="tipo" name="tipo">
+                            <mat-option *ngFor="let n of tipoV" [value]="n.value">{{n.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="selector" appearance="outline">
+                        <mat-label>Poblacion</mat-label>
+                        <input matInput placeholder="Buscar población" [(ngModel)]="poblacion" name="poblacion">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button style="margin-top: 50px;" mat-raised-button color="primary" [routerLink]="['/viviendas']" (click)="filtrar()">
+                        <mat-icon matSuffix>search</mat-icon> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Top favoritos de la comunidad</h2>
+            </div>
+            <div class="col-md-1 offset-md-8">
+                <button routerLink="/viviendas" mat-flat-button color="primary">Ver todas</button>
+            </div>
+        </div>
+        <app-top-viviendas></app-top-viviendas>
+    </div>
+    <div>
+        <div class="row inmo">
+            <div class="col-md-3">
+                <h2>Inmobiliarias Afiliadas</h2>
+            </div>
+            <div class="col-md-1 offset-md-8">
+                <button routerLink="/inmobiliarias" mat-flat-button color="primary">Ver todas</button>
+            </div>
+        </div>
+        <app-top-inmobiliarias></app-top-inmobiliarias>
+    </div>
+    <div>
+        <div class="row prop">
+            <div class="col-md-3">
+                <h2>Ejemplos de éxito</h2>
+            </div>
+            <div class="col-md-1 offset-md-8">
+                <button routerLink="/propietarios" mat-flat-button color="primary">Ver todos</button>
+            </div>
+        </div>
+        <app-top-propietarios></app-top-propietarios>
+    </div>
+</div>

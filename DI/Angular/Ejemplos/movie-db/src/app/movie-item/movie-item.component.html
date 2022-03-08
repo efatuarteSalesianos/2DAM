@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{movieInput?.title}}</mat-card-title>
+        <mat-card-subtitle>{{movieInput?.release_date}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="image" [src]='getPhotoUrl(movieInput?.backdrop_path)' [alt]='(movieInput?.title)'>
+    <mat-card-content>
+        <p>
+            {{movieInput?.overview}}
+        </p>
+        <p>Valoración: {{movieInput?.vote_average}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary">VER MÁS</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "99a5b77b-3638-4522-a21b-6b90e015607c",
+		"name": "ValidationExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - Listar todas las estaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacion/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02 - Mostrar una estación",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacion/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02.1 - Mostrar una estación NO EXISTENTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacion/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03 - Crear estación",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Gasolinera El Plantinar\",\r\n    \"marca\": \"Cepsa\",\r\n    \"ubicacion\": \"37.3949, -6.00247\",\r\n    \"tieneAutolavado\": true,\r\n    \"precioGasoilNormal\": 1.85,\r\n    \"precioGasolina95Octanos\": 2.10, \r\n    \"precioGasoilEspecial\": 1.62,\r\n    \"precioGasolina98\": 1.93,\r\n    \"servicios\": \"Parking de mercancías peligrosas, Zona de lavado, Suministro de combustible, Tienda, Servicio asistido de comprobación de neumáticos, Restaurante y cafetería, Puntos de recarga y Contenedores de recogida\",\r\n    \"fechaApertura\": \"2018-02-05T12:59:11.332\",\r\n    \"fechaRegistro\": \"2018-03-05T12:59:11.332\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estacion/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03.1 - ERROR al Crear Estación",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Gasolinera Repsol Calle Torneo\",\r\n    \"ubicacion\": \"37.3949, -6.00247\",\r\n    \"precioGasoilNormal\": 1.85,\r\n    \"precioGasolina95Octanos\": 2.10, \r\n    \"precioGasoilEspecial\": -1.05,\r\n    \"precioGasolina98\": 1.93,\r\n    \"servicios\": \"Parking de mercancías peligrosas, Zona de lavado, Suministro de combustible, Tienda, Servicio asistido de comprobación de neumáticos, Restaurante y cafetería, Puntos de recarga y Contenedores de recogida\",\r\n    \"fechaApertura\": \"2018-02-05T12:59:11.332\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estacion/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04 - Editar estación",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Gasolinera Repsol Calle Torneo\",\r\n    \"marca\": \"Repsol\",\r\n    \"ubicacion\": \"37.3949, -6.00247\",\r\n    \"tieneAutolavado\": true,\r\n    \"precioGasoilNormal\": 1.80,\r\n    \"precioGasolina95Octanos\": 2.40, \r\n    \"precioGasoilEspecial\": 1.50,\r\n    \"precioGasolina98\": 2.13,\r\n    \"servicios\": \"Parking de mercancías peligrosas, Zona de lavado, Suministro de combustible, Tienda, Servicio asistido de comprobación de neumáticos, Restaurante y cafetería, Puntos de recarga y Contenedores de recogida\",\r\n    \"fechaApertura\": \"2018-02-05T12:59:11.332\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estacion/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04.1 - ERROR Al editar estación",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Gasolinera Repsol Calle Torneo\",\r\n    \"ubicacion\": \"37.3949, -6.00247\",\r\n    \"precioGasoilNormal\": 1.85,\r\n    \"precioGasolina95Octanos\": 2.10, \r\n    \"precioGasoilEspecial\": -1.05,\r\n    \"precioGasolina98\": 1.93,\r\n    \"servicios\": \"Parking de mercancías peligrosas, Zona de lavado, Suministro de combustible, Tienda, Servicio asistido de comprobación de neumáticos, Restaurante y cafetería, Puntos de recarga y Contenedores de recogida\",\r\n    \"fechaApertura\": \"2018-02-05T12:59:11.332\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estacion/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05 - Borrar estación",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacion/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacion",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
